@@ -1,0 +1,26 @@
+animasi = ['pain','konan','tobi','kisame','madara']
+
+print('akses list')
+print('elemen ke 3 : ', animasi[3])
+print('elemen ke 2 sampai ke 4 : ', animasi[2:5])
+print('elemen terakhir : ', animasi [-1])
+
+print('ubah elemen list')
+print(animasi)
+animasi[3] = 'deidara'
+print('elemen ke 4 adalah ', animasi[3])
+print(animasi)
+animasi[3:] = 'itachi','sasori'
+print(animasi)
+
+print('tambah elemen list')
+A = animasi [0:2]
+B = animasi [2:]
+print(A)
+print(B)
+B.append('kakuzu')
+print(B)
+B.extend(['hidan'])
+print(B)
+B.extend(A)
+print(B)
