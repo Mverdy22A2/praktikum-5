@@ -1,0 +1,43 @@
+NAMA = []
+NIM = []
+tugas = []
+UTS = []
+UAS = []
+total = []
+
+while True:
+    nama = input('Nama : ')
+    NAMA.append(nama)
+    nim = int(input('Nim : '))
+    NIM.append(nim)
+    ntugas = float(input('nilai tugas : '))
+    tugas.append(ntugas)
+    uts = float(input('nilai UTS : '))
+    UTS.append(uts)
+    uas = float(input('nilau UAS : '))
+    UAS.append(uas)
+
+    nAKHIR = (int(ntugas) * .3) + (int(uts) * .35) + (int(uas) * .35)
+    total.append(nAKHIR)
+
+    lagi = ''
+    while lagi != 'y' and lagi != 't':
+        lagi = input('tambah data (y/t)? ')
+    if lagi == 't' :
+        print('='*70)
+        print('| no |  name     |    nim    | tugas |  UTS  |  UAS  | AKHIR |')
+        print('='*70)
+
+        for i in range (len(tugas)):
+            nm = '| %d. |\t%s\t'%(i+1,NAMA[i])
+            im =' | %d' % NIM[i]
+            tg = ' | %.2f' % tugas[i]
+            ut = ' | %.2f' % UTS[i]
+            ua = ' | %.2f' % UAS[i]
+            ah = ' | %.2f' % total[i]
+            In = ' |'
+
+            join = nm + im + tg + ut + ua + ah + In
+            print(join)
+
+        break
